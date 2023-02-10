@@ -1,0 +1,305 @@
+/*--------------------------------------- Global ---------------------------------------*/
+
+
+
+body {
+    background-color: #fff;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/*--------------------------------------- Header ---------------------------------------*/
+
+
+
+header {
+    background-color: #FFF;
+    height: fit-content;
+}
+
+.flex {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    width: 20%;
+}
+
+.logo-img {
+    width: auto;
+    height: 50px;
+}
+
+.headerlist {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    width: 50%;
+}
+
+.headerlist-content {
+    text-decoration: none;
+    width: 150px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.headerlist-content:hover {
+    cursor: pointer;
+}
+
+
+
+/*--------------------------------------- Page ---------------------------------------*/
+
+
+
+.page {
+    background-color: #fff;
+}
+
+.space {
+    height: 100px;
+}
+
+.inside {
+    margin: 0 10% 0 10%;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 1000px;
+    position: relative;
+}
+
+.content1,
+.content2,
+.content3,
+.content4,
+.content5 {
+    background-color: #FFF;
+    height: 50%;
+    width: 19%;
+    transition: 0.3s ease-in-out;
+}
+
+.content1:hover,
+.content2:hover,
+.content3:hover,
+.content4:hover,
+.content5:hover {
+    width: 80%;
+    cursor: pointer;
+}
+
+.inside-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.width4 {
+    width: 4%;
+}
+
+.blur {
+    filter: blur(1px);
+}
+
+
+
+/*--------------------------------------- Footer ---------------------------------------*/
+
+
+
+footer {
+    background-color: #FAFAFA;
+    height: 50px;
+}
+
+
+
+/*--------------------------------------- Page de jeu ---------------------------------------*/
+
+
+
+.background-img {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 1080px;
+    position: relative;
+}
+
+.background-img img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.background-black {
+    background-color: black;
+    height: 100em;
+}
+
+.info-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    -webkit-box-shadow: 0px 0px 35px 5px rgba(20, 196, 255, 0.05);
+    box-shadow: 0px 0px 35px 5px rgba(20, 196, 255, 0.05);
+}
+
+.game-title {
+    font-size: 100px;
+    margin: 0;
+    color: #254441;
+
+}
+
+.game-infos {
+    height: 50em;
+    width: 100%;
+    position: absolute;
+    top: 500px;
+    text-align: center;
+}
+
+.gameplay-container {
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.gameplay-container h3 {
+    font-family: 'Montserrat';
+}
+
+.gameplay-note {
+    background-color: #fafafa;
+    color: gray;
+    height: 5px;
+}
+
+.gameplay-note-container {
+    background-color: gray;
+    margin: 0% 5% 3%;
+}
+
+.quick-infos {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    padding: 0px;
+}
+
+.quick-infos-item {
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 0;
+    text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+.quick-infos-item .developper {
+    color: #fff;
+    background-color: #43AA8B;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.quick-infos-item .date {
+    color: #fff;
+    background-color: #FF6F59;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.quick-infos-item .pc {
+    color: #fff;
+    background-color: #DB504A;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.quick-infos-item .xbox {
+    color: #fff;
+    background-color: #DB504A;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.quick-infos-item .playstation {
+    color: #fff;
+    background-color: #DB504A;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.desc {
+    text-align: justify;
+}
+
+.img-container {
+    width: 100%;
+}
+
+.game-gallery {
+    /*
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 25%;
+    */
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-self: center;
+    padding: 0;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.game-img {
+    margin: 0 20px 0 0;
+    background-color: #DB504A;
+    list-style-type: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    flex: 0 0 auto;
+}
