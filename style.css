@@ -75,15 +75,17 @@ header {
 
 .inside {
     margin: 0 10% 0 10%;
-    height: 100%;
 }
 
 .content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    height: 500px;
+    justify-content: space-between;
     position: relative;
+    height: 360px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 22px;
+    border-radius: 10px;
 }
 
 .content1,
@@ -99,12 +101,12 @@ header {
     overflow: hidden;
 }
 
-.content1{
-    border-top-left-radius: 10px ;
-    border-bottom-left-radius: 10px ;
+.content1 {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
-.content5{
+.content5 {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -132,14 +134,109 @@ header {
     filter: blur(1px);
 }
 
-.gotm-bg{
+.gotm-bg {
     background-color: #254441;
+    background-image: url(img/hogwards-legacy.jpg);
     width: 100%;
-    height: 100%;
+    height: 460px;
     padding-top: 100px;
     padding-bottom: 200px;
     clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 91%);
 }
+
+.slider-container {
+    position: absolute;
+    z-index: 3;
+    top: 570px;
+}
+
+.game-slider {}
+
+
+
+/*--------------------------------------- Section des cartes des jeux ---------------------------------------*/
+.card-section-title {
+    font-size: 7em;
+    margin: 0;
+    color: #254441;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 23.3em;
+    -webkit-box-shadow: 0px 0px 35px 5px rgba(20, 196, 255, 0.1);
+    box-shadow: 0px 0px 35px 5px rgba(20, 196, 255, 0.1);
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1.3em;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.card-containerv2 {}
+
+
+.cardv2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.cardv2img {
+    height: 190px;
+    width: 190px;
+    border-radius: 10px;
+    background-color: #FAFAFA;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    object-fit: cover;
+    object-position: 0;
+    z-index: 3;
+}
+
+.cardv2desc {
+    height: 150px;
+    width: 80%;
+    border-radius: 0 10px 10px 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #FAFAFA;
+    z-index: 2;
+}
+
+.cardv2rank {
+    width: 20%;
+    height: 5%;
+    position: absolute;
+    left: 143px;
+    top: 171px;
+    z-index: 1;
+    clip-path: polygon(0 0%, 100% 0, 96% 100%, 0 100%);
+
+}
+
+.cardv2:first-child>.cardv2rank {
+    background-color: #eb930f;
+}
+
+.cardv2:nth-child(2)>.cardv2rank {
+    background-color: #717171;
+}
+
+.cardv2:nth-child(3)>.cardv2rank {
+    background-color: #914300;
+}
+
 
 
 /*--------------------------------------- Footer ---------------------------------------*/
@@ -148,10 +245,45 @@ header {
 
 footer {
     background-color: #FAFAFA;
-    height: 50px;
 }
 
+.footer-collumns-container {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+}
 
+.footer-collumn {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-bottom {
+    margin: auto;
+    width: fit-content;
+    background-color: #FAFAFA;
+    height: 50px;
+    border-top: rgb(223, 223, 223) solid 1px;
+}
+
+.very-small-text {
+    font-size: 12px;
+}
+
+.social-icon {
+    height: 30px;
+    width: auto;
+    fill: #DB504A;
+    margin-left: 10px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+}
 
 /*--------------------------------------- Page de jeu ---------------------------------------*/
 
@@ -348,9 +480,9 @@ footer {
 .project-item:hover .overlay {
     bottom: 0;
     height: 100%;
-  }
+}
 
-  .overlay{
+.overlay {
     position: absolute;
     margin: auto;
     bottom: 100%;
@@ -368,7 +500,7 @@ footer {
     text-align: center;
     height: 171px;
     width: 304px;
-    transition: 0.3s ease-in-out ;
+    transition: 0.3s ease-in-out;
     box-shadow: 0px 0px 30px #6a6b6d;
     overflow: hidden;
     position: relative;
