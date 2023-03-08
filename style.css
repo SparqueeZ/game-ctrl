@@ -22,8 +22,11 @@ a {
 
 
 header {
-    background-color: #254441;
+    background-color: transparent;
     height: fit-content;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
 }
 
 .flex {
@@ -53,6 +56,10 @@ header {
     width: 150px;
     vertical-align: middle;
     text-align: center;
+}
+
+.headerlist-content a {
+    color: #fff;
 }
 
 .headerlist-content:hover {
@@ -156,7 +163,7 @@ header {
 
 /*--------------------------------------- Section des cartes des jeux ---------------------------------------*/
 .card-section-title {
-    font-size: 7em;
+    font-size: 4em;
     margin: 0;
     color: #254441;
 }
@@ -206,12 +213,49 @@ header {
 }
 
 .cardv2desc {
-    height: 150px;
+    height: 132px;
     width: 80%;
     border-radius: 0 10px 10px 0;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     background-color: #FAFAFA;
     z-index: 2;
+    padding: 10px;
+}
+
+.cardv2name {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.cardv2phrase {
+    font-size: 11px;
+}
+
+.cardV2RatingContainer {
+    display: flex;
+    height: 59%;
+    background-color: #DB504A;
+}
+
+.cardV2RatingSection {
+    width: 28%;
+    display: flex;
+    padding: 10px;
+}
+
+.cardV2RatingIcon {
+    width: 30%;
+    background-color: #254441;
+}
+
+.cardV2RatingProgressBar {
+    width: 70%;
+    background-color: #914300;
+}
+
+.cardV2RatingTabBtn {
+    width: 7%;
+    background-color: #914300;
 }
 
 .cardv2rank {
@@ -454,6 +498,24 @@ footer {
     width: 300px;
     height: 200px;
     flex: 0 0 auto;
+}
+
+/*-- Test --*/
+
+.box {
+    display: flex;
+}
+
+.gauche {
+    width: 40%;
+    height: 300px;
+    background-color: #DB504A;
+}
+
+.droite {
+    width: 60%;
+    height: 300px;
+    background-color: #43AA8B;
 }
 
 
