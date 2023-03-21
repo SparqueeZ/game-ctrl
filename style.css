@@ -195,10 +195,9 @@ header {
 
 .cardv2 {
     display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 20px 0;
     position: relative;
+    justify-content: center;
 }
 
 .cardv2img {
@@ -213,13 +212,15 @@ header {
 }
 
 .cardv2desc {
+    width: 100%;
     height: 132px;
-    width: 80%;
     border-radius: 0 10px 10px 0;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     background-color: #FAFAFA;
     z-index: 2;
     padding: 10px;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
 }
 
 .cardv2name {
@@ -233,7 +234,7 @@ header {
 
 .cardV2RatingContainer {
     display: flex;
-    height: 59%;
+    height: 77px;
     background-color: #DB504A;
 }
 
@@ -282,6 +283,17 @@ header {
 }
 
 
+
+/* - Test - */
+
+
+.cardV2RatingTabBtn:hover{
+    cursor:pointer;
+}
+
+.open{
+    height: 500px;
+}
 
 /*--------------------------------------- Footer ---------------------------------------*/
 
