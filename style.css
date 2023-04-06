@@ -651,6 +651,7 @@ footer {
 
 .separation {
     display: flex;
+    margin-bottom: 150px;
 }
 
 .search {
@@ -658,5 +659,12 @@ footer {
     justify-content: center;
     margin-top: 150px;
     flex: 0 0 auto;
-    background-color: red;
+}
+
+.search-bar {
+    width: 100%;
+    justify-content: center;
+    flex: 0 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
 }
