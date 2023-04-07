@@ -212,8 +212,7 @@ header {
     margin-bottom: -4px;
 }
 
-.cardv2desc {
-}
+.cardv2desc {}
 
 .cardv2name {
     text-transform: uppercase;
@@ -224,13 +223,12 @@ header {
 
 .cardv2phrase {
     font-size: 14px;
-    height : 18%;
+    height: 31.31px;
 }
 
 .cardV2RatingContainer {
     display: flex;
     height: 77px;
-    background-color: #DB504A;
 }
 
 .cardV2RatingSection {
@@ -241,11 +239,16 @@ header {
 
 .cardV2RatingIcon {
     aspect-ratio: 1/1;
-    border: black solid 5px;
+    border: solid 2px black;
+    background-color: white;
     border-radius: 100%;
-    position: relative;
+    position: absolute;
+    height: 53px;
+    z-index: 10;
+    margin: 0;
 }
-.cardV2RatingIcon img{
+
+.cardV2RatingIcon img {
     aspect-ratio: 1/1;
     height: 70%;
     position: absolute;
@@ -256,8 +259,19 @@ header {
 }
 
 .cardV2RatingProgressBar {
-    width: 70%;
-    background-color: #914300;
+    width: 100%;
+    position: relative;
+    border-radius: 100px;
+    border: solid 2px black;
+}
+
+.cardV2RatingBar {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 30px;
+    border-radius: 0 100px 100px 0;
+    background-color: #F15A24;
 }
 
 .cardV2RatingTabBtn {
@@ -330,10 +344,10 @@ header {
 
 .card-left img {
     z-index: 9;
-    position: relative ;
+    position: relative;
 }
 
-.cardrating20{
+.cardrating20 {
     position: absolute;
     z-index: 5;
     width: 240px;
@@ -341,18 +355,18 @@ header {
     left: 0;
 }
 
-.rating:first-child{
+.rating:first-child {
     border-bottom: 1px solid #fff;
 }
 
-.rating{
+.rating {
     margin: 0;
     font-size: 50px;
     font-weight: 700;
     color: #fff;
 }
 
-.cardrating20in{
+.cardrating20in {
     text-align: center;
     width: 35%;
     display: block;
