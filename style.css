@@ -362,7 +362,7 @@ header {
 
     height: 76%;
     border-radius: 0 10px 10px 0;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px;
     background-color: #FAFAFA;
     padding: 10px;
     margin: auto 10% auto auto;
@@ -644,6 +644,112 @@ footer {
     background-color: #43AA8B;
 }
 
+
+
+
+/*------------Page de contact------------*/
+
+
+
+
+.background-image {
+    background-image: url(img/hogwards-legacy.jpg);
+}
+
+.background-form::before {
+    filter: blur(100px);
+}
+
+.contact-form {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px;
+    background-color: #fff;
+}
+
+.contact-form p {
+    margin: 0;
+}
+
+.form-holder {
+    width: 85%;
+}
+
+.form-title p {
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form-spacer {
+    height: 30px;
+}
+
+.form-mail-holder {
+    margin: auto;
+}
+
+input {
+    width: 100%;
+    height: 35px;
+    font-size: 20px;
+    border: none;
+    background-color: whitesmoke;
+}
+
+input[type=identity] {
+    width: 85%;
+}
+
+input:focus {
+    border: none;
+    background-color: whitesmoke;
+    outline: none;
+    color: #949494;
+}
+
+textarea[name=message] {
+    height: 200px;
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    background-color: whitesmoke;
+}
+
+.form-btn-holder {
+    display: flex;
+}
+
+button[type=submit] {
+    background-color: #FF6F59;
+    border: none;
+    height: 35px;
+    aspect-ratio: 4/1;
+    width: auto;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #ff8b7a;
+}
+
+.form-identity-holder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-message-holder {
+    margin: auto;
+}
 
 /*------------My shit------------*/
 
