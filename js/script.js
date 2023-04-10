@@ -18,17 +18,11 @@ const Slider = () => {
 const DescDevelop = () => {
   $(document).ready(function () {
     // Détection du click
-    $('.cardV2RatingTabBtn').click(function (e) {
+    $('.cardBtn').click(function (e) {
       // Ajout de la classe au premier click, remove au second
+      $(e.target).closest('.cardBtn').toggleClass('btn-clicked');
       $(e.target).closest('.cardv2').toggleClass('card-active');
-      $(e.target).closest('.card-right').toggleClass('cardright-active');
     });
-  });
-
-  $(".cardV2RatingTabBtn").click(function (e) {
-    if ($(".cardv2desc").hasClass("open")) {
-      console.log($(e.target).closest(".cardv2 > card-left").addClass("Yo"))
-    }
   });
 }
 const PercentMatching = () => {
