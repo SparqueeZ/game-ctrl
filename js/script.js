@@ -3,11 +3,11 @@ const Slider = () => {
     $(".content" + nbr_cartes).hover(
       function () {
         for (carte = 0; carte <= nbr_cartes; carte++) {
-          $(".content" + carte).addClass("width4");
+          $(".content" + carte).addClass("unusedcard");
         }
       }, function () {
         for (carte = 0; carte <= nbr_cartes; carte++) {
-          $(".content" + carte).removeClass("width4");
+          $(".content" + carte).removeClass("unusedcard");
         }
       }
     );
@@ -51,8 +51,6 @@ const PercentMatching = () => {
 
       console.log("orange", size);
     } else if (size <= 33 && size >= 15) {
-      size = 20;
-
       const width = `${size}%`;
       bar.style.width = width;
       $(bar).addClass("red");
@@ -103,6 +101,56 @@ function extractNumber(str) {
   return null;
 }
 
+const generateHeader = () => {
+
+  const loc = $(location).attr('href');
+  const pageAccueil = loc.includes("index");
+  const pageContact = loc.includes("contact");
+
+  if (pageAccueil) {
+    $(document).ready(function () {
+      $('body').prepend('<header> <section id="top-header"> <div class="inside white"> <div class="flex"> <div class="logo"><img class="logo-img" src="img/logo-gc.png" alt="" srcset="" /></div> <ul class="headerlist"> <li class="headerlist-content"><a href="index.html" class="white"> Accueil </a></li> <li class="headerlist-content"><a href="#" class="white"> Nos derniers tests </a></li> <li class="headerlist-content"><a href="pages/game-list.html" class="white"> Jeux </a></li> </ul> </div> </div> </section> <section id="sticky-header" class="display-none"> <div class="inside white"> <div class="flex"> <div class="logo"><img class="logo-img" src="img/logo-gc.png" alt="" srcset="" /></div> <ul class="headerlist"> <li class="headerlist-content"><a href="index.html" class="white"> Accueil </a></li> <li class="headerlist-content"><a href="#" class="white"> Nos derniers tests </a></li> <li class="headerlist-content"><a href="pages/game-list.html" class="white"> Jeux </a></li> </ul> </div> </div> </section> </header>');
+    });
+  } else if (pageContact) {
+    $(document).ready(function () {
+      $('body').prepend('<header> <section id="top-header"> <div class="inside white"> <div class="flex"> <div class="logo"><img class="logo-img" src="../img/logo-gc.png" alt="" srcset="" /></div> <ul class="headerlist"> <li class="headerlist-content"><a href="../index.html" class="white"> Accueil </a></li> <li class="headerlist-content"><a href="#" class="white"> Nos derniers tests </a></li> <li class="headerlist-content"><a href="../pages/game-list.html" class="white"> Jeux </a></li> </ul> </div> </div> </section> <section id="sticky-header" class="display-none"> <div class="inside white"> <div class="flex"> <div class="logo"><img class="logo-img" src="../img/logo-gc.png" alt="" srcset="" /></div> <ul class="headerlist"> <li class="headerlist-content"><a href="../index.html" class="white"> Accueil </a></li> <li class="headerlist-content"><a href="#" class="white"> Nos derniers tests </a></li> <li class="headerlist-content"><a href="../pages/game-list.html" class="white"> Jeux </a></li> </ul> </div> </div> </section> </header>');
+    });
+  }
+  else {
+    $(document).ready(function () {
+      $('body').prepend('<header> <section id="top-header"> <div class="inside black"> <div class="flex"> <div class="logo"><img class="logo-img" src="../img/logo-gc.png" alt="" srcset="" /></div> <ul class="headerlist"> <li class="headerlist-content"><a href="../index.html" class="black"> Accueil </a></li> <li class="headerlist-content"><a href="#" class="black"> Nos derniers tests </a></li> <li class="headerlist-content"><a href="../pages/game-list.html" class="black"> Jeux </a></li> </ul> </div> </div> </section> <section id="sticky-header" class="display-none"> <div class="inside white"> <div class="flex"> <div class="logo"><img class="logo-img" src="../img/logo-gc.png" alt="" srcset="" /></div> <ul class="headerlist"> <li class="headerlist-content"><a href="../index.html" class="white"> Accueil </a></li> <li class="headerlist-content"><a href="#" class="white"> Nos derniers tests </a></li> <li class="headerlist-content"><a href="../pages/game-list.html" class="white"> Jeux </a></li> </ul> </div> </div> </section> </header>');
+    });
+  }
+}
+
+
+
+function headerscroll() {
+  const checkHeader = () => {
+    //console.log('checkHeader');
+
+    $(window).scroll(function () {
+      let scrollPosition = $(this).scrollTop();
+      console.log(scrollPosition); // Affiche la position du scroll dans la console du navigateur
+
+      if (scrollPosition >= 100) {
+        $('#top-header').addClass("display-none");
+        $('#sticky-header').removeClass("display-none").addClass("sticky");
+      }
+      else {
+        $('#top-header').removeClass("display-none");
+        $('#sticky-header').addClass("display-none").removeClass("sticky");
+
+      }
+    });
+
+  };
+
+  window.addEventListener('scroll', checkHeader)
+}
+
+headerscroll()
+generateHeader();
 Slider();
 DescDevelop();
 PercentMatching();

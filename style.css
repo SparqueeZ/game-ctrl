@@ -28,6 +28,14 @@ a {
     background-color: limegreen;
 }
 
+.white {
+    color: #FAFAFA;
+}
+
+.black {
+    color: #0f0f0f;
+}
+
 
 
 /*--------------------------------------- Header ---------------------------------------*/
@@ -71,12 +79,38 @@ header {
     text-align: center;
 }
 
-.headerlist-content a {
-    color: #fff;
-}
-
 .headerlist-content:hover {
     cursor: pointer;
+}
+
+.sticky {
+    height: 54px;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px;
+    overflow: hidden;
+    animation: test 0.4s;
+    z-index: 1000;
+}
+
+.sticky a {
+    color: black;
+}
+
+.display-none {
+    display: none;
+}
+
+@keyframes test {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 60;
+    }
 }
 
 
@@ -143,6 +177,7 @@ header {
 .content5:hover {
     width: 80%;
     cursor: pointer;
+    filter: brightness(1);
 }
 
 .inside-img {
@@ -151,8 +186,9 @@ header {
     object-fit: cover;
 }
 
-.width4 {
+.unusedcard {
     width: 4%;
+    filter: brightness(0.5);
 }
 
 .blur {
@@ -174,8 +210,6 @@ header {
     z-index: 3;
     top: 570px;
 }
-
-.game-slider {}
 
 
 
@@ -365,7 +399,7 @@ header {
     height: 5%;
     position: absolute;
     left: 143px;
-    top: 161px;
+    top: 89%;
     z-index: 1;
     clip-path: polygon(0 0%, 100% 0, 96% 100%, 0 100%);
 }
@@ -401,7 +435,7 @@ header {
     height: 95%;
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    background-color: rgba(100, 100, 111, 0.2);
+    background-color: #6a6b6d
 }
 
 .card-right {
@@ -435,14 +469,14 @@ header {
 }
 
 .rating:first-child {
-    border-bottom: 1px solid #fff;
+    border-bottom: 5px solid #ED1C24;
 }
 
 .rating {
     margin: 0;
     font-size: 50px;
     font-weight: 700;
-    color: #fff;
+    color: #ED1C24;
 }
 
 .cardrating20in {
@@ -450,7 +484,7 @@ header {
     width: 35%;
     display: block;
     margin: auto;
-    background-color: rgba(37, 68, 65, 1);
+    background-color: #fff;
     border-radius: 10px;
     padding: 10px;
 
