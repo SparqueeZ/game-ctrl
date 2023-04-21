@@ -59,7 +59,7 @@ header {
 }
 
 .headerlist-content a {
-    color: #fff;
+    color: #ffffff;
 }
 
 .headerlist-content:hover {
@@ -157,7 +157,15 @@ header {
     top: 570px;
 }
 
-.game-slider {}
+.game-slider {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
 
 
 
@@ -667,4 +675,31 @@ footer {
     flex: 0 0 auto;
     text-align: center;
     margin-bottom: 20px;
+}
+
+li a{
+    position: relative;
+    display: block;
+    transition: .2s;
+}
+
+li a::after{
+    position:absolute;
+    content: "";
+    width: 100px;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    transition: transform .2s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+li a:hover{
+    color: red;
+}
+
+li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
 }
